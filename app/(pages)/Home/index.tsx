@@ -8,7 +8,7 @@ type Props = {
 }
 export default function Home(props:Props) {
   const { me } = props
-  if(!me) return <p>No Data!</p>
+  if(!me) return null
   return (
     <section className="flex flex-col md:grid md:grid-cols-2 gap-12">
       <div className="relative h-full min-h-[600px]">
@@ -45,8 +45,10 @@ export default function Home(props:Props) {
               className="w-full h-full flex flex-col center gap-1 border border-dashed border-neutral-700 p-4 rounded"
             >
               <CountUp
+                prefix="+"
                 delay={0.5 * idx}
                 end={info.value}
+
                 className="text-3xl font-bold"
               />
               <span className="text-center">{info.name}</span>

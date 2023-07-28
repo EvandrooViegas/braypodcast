@@ -6,9 +6,9 @@ import React from "react";
 type Props = { videos: iVideo[] | undefined, title?: string }
 export default function Videos(props:Props) {
   const { videos, title = "Best Videos" } = props
-  if(!videos) return <p>No Videos!</p> 
+  if(!videos) return null
   return (
-    <section className="flex flex-col gap-3" id="arts">
+    <section className="flex flex-col gap-3" id="videos">
       <Title title={title} />
       <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
         {videos.map((video) => (

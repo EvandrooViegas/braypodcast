@@ -9,12 +9,12 @@ export default function Video(props: Props) {
   return (
     <a href={video.link} target="_blank" className="group relative flex flex-col gap-3">
       <div className="relative w-full h-[450px]">
-        <Image src={video.banner} fill alt="Video Banner" className="rounded-xl" />
+        <Image src={video.banner} fill alt="Video Banner" className="rounded-xl object-center object-cover" />
         <div className="transition-all inset-0 absolute flex center bg-black/30 group-hover:bg-black/70">
           <IoPlay size="90px" color="white" />
         </div>
       </div>
-      <span className="text-base font-bold text-neutral-300">{video.name}</span>
+      <span className="text-base font-bold text-neutral-300 capitalize">{video.name}</span>
     </a>
   );
 }

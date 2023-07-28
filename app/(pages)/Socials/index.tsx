@@ -9,7 +9,7 @@ type Props = {
 }
 export default function Socials(props:Props) {
   const { socials } = props
-  if(!socials) return <p>No Socials</p>
+  if(!socials) return null
   return (
     <section className="flex flex-col gap-3" id="socials">
       <Title title=" Socials" />

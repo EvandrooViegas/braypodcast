@@ -1,8 +1,8 @@
 import { defineType, defineField, defineArrayMember } from "sanity";
 import { BsPerson } from "react-icons/bs";
-import testimonials from "./testimonials";
 import infos from "./infos";
 import social_medias from "./social_medias";
+import photos from "./photos";
 
 export const me = defineType({
   title: "Me",
@@ -55,20 +55,13 @@ export const me = defineType({
       type: "string",
       validation: (r) => r.min(3).error("Slogan must be longer than 3 words"),
     }),
+    photos,
     defineField({
       title: "Best Videos",
       name: "best_videos",
       type: "array",
       of: [{ type: "reference", name: "video", title: "Video", to: [{ type: "video" }] }],
       validation: r => r.required()
-    }),
-    defineField({
-      title: "Best Videos",
-      name: "behind_scenes",
-      type: "array",
-      of: [{ type: "reference", name: "video", title: "Video", to: [{ type: "video" }] }],
-      validation: r => r.required()
-
     }),
     social_medias,
     infos,
@@ -96,6 +89,5 @@ export const me = defineType({
         })
       ],
     }),
-    testimonials,
   ],
 });
