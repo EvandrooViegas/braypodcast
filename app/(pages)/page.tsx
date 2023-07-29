@@ -7,6 +7,7 @@ import { getMeData } from "@/actions/me";
 import LatestVideo from "./LatestVideo";
 import Photos from "./Photos";
 import Skills from "./Skills";
+import TrustedBy from "./TrustedBy";
 
 export const revalidate = 15;
 
@@ -18,6 +19,7 @@ export default async function Page() {
   const video = me?.video
   const photos = me?.photos
   const skills = me?.skills
+  const trusted_by = me?.trusted_by
   return (
     <main className="flex flex-col gap-12">
       <Home me={me} />
@@ -26,6 +28,7 @@ export default async function Page() {
       <Photos photos={photos} />
       <Videos videos={bestVideos} />
       <FollowersGrowth followersGrowth={followersGrowth} />
+      <TrustedBy trusted_by={trusted_by} />
       <Socials socials={socials} />
     </main>
   );

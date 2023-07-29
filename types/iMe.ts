@@ -1,6 +1,7 @@
 import iFollowersGrowth from "./iFollowersGrowth";
 import iInfo from "./iInfo";
 import iSocialMedia from "./iSocialMedia";
+import iTrustedBy from "./iTrustedBy";
 import iVideo from "./iVideo";
 
 export default interface iMe {
@@ -10,9 +11,10 @@ export default interface iMe {
   video?: string;
   skills: string[];
   slogan: string;
-  photos: string[]
+  photos: string[];
   best_videos: iVideo[];
   social_medias: iSocialMedia[];
+  trusted_by?: iTrustedBy[];
   infos: iInfo[];
   followers_growth?: iFollowersGrowth[];
   _id: string;

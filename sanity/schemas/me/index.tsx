@@ -3,6 +3,7 @@ import { BsPerson } from "react-icons/bs";
 import infos from "./infos";
 import social_medias from "./social_medias";
 import photos from "./photos";
+import truested_by from "./trusted_by";
 
 export const me = defineType({
   title: "Me",
@@ -65,6 +66,7 @@ export const me = defineType({
     }),
     social_medias,
     infos,
+    truested_by,
     defineField({
       name: "followers_growth",
       title: "Followers Growth",
