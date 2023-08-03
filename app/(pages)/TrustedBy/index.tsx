@@ -17,6 +17,7 @@ export default function TrustedBy(props: Props) {
             href={entity.link}
             className="flex flex-col items-center gap-2 "
             key={entity.name}
+            target="_blank"
           >
             <div className="relative w-[100px] h-[100px] ">
               <Image src={entity.avatar} fill alt="Entity Avatar" className="object-center object-cover rounded-full" />
