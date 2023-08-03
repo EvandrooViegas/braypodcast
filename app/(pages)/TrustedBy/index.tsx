@@ -13,7 +13,8 @@ export default function TrustedBy(props: Props) {
       <Title title="Trusted By" />
       <div className="flex gap-4 flex-wrap">
         {trusted_by.map((entity) => (
-          <div
+          <a
+            href={entity.link}
             className="flex flex-col items-center gap-2 "
             key={entity.name}
           >
@@ -21,7 +22,7 @@ export default function TrustedBy(props: Props) {
               <Image src={entity.avatar} fill alt="Entity Avatar" className="object-center object-cover rounded-full" />
             </div>
               <span className="font-bold">{entity.name}</span>
-          </div>
+          </a>
         ))}
       </div>
     </div>

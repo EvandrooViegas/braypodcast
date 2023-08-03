@@ -21,6 +21,12 @@ const trusted_by = defineField({
             type: "image",
             validation: r => r.required()
           }),
+          defineField({
+            title: "Link",
+            name: "link",
+            type: "url",
+            validation: r => r.required()
+          }),
         ],
       }),
     ],
