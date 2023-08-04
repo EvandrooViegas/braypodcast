@@ -62,7 +62,12 @@ export const me = defineType({
       name: "best_videos",
       type: "array",
       of: [{ type: "reference", name: "video", title: "Video", to: [{ type: "video" }] }],
-      validation: r => r.required()
+    }),
+    defineField({
+      title: "Best Arts",
+      name: "arts",
+      type: "array",
+      of: [{ type: "reference", name: "arts", title: "Arts", to: [{ type: "arts" }] }],
     }),
     social_medias,
     infos,

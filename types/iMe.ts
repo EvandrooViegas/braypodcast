@@ -1,3 +1,4 @@
+import iArt from "./iArt";
 import iFollowersGrowth from "./iFollowersGrowth";
 import iInfo from "./iInfo";
 import iSocialMedia from "./iSocialMedia";
@@ -12,7 +13,8 @@ export default interface iMe {
   skills: string[];
   slogan: string;
   photos: string[];
-  best_videos: iVideo[];
+  best_videos?: iVideo[];
+  arts: iArt[];
   social_medias: iSocialMedia[];
   trusted_by?: iTrustedBy[];
   infos: iInfo[];
