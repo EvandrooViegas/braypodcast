@@ -4,6 +4,7 @@ import infos from "./infos";
 import social_medias from "./social_medias";
 import photos from "./photos";
 import truested_by from "./trusted_by";
+import testimonials from "./testimonials";
 
 export const me = defineType({
   title: "Me",
@@ -71,6 +72,7 @@ export const me = defineType({
     }),
     social_medias,
     infos,
+    testimonials,
     truested_by,
     defineField({
       name: "followers_growth",

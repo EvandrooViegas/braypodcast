@@ -14,7 +14,7 @@ export default function Video(props: Props) {
           <IoPlay size="90px" color="white" />
         </div>
       </div>
-      <span className="text-base font-bold text-neutral-300 capitalize">{video.name}</span>
+      <span className="text-base font-bold text-neutral-300 capitalize">{video?.name}</span>
     </a>
   );
 }

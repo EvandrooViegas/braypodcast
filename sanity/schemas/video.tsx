@@ -11,7 +11,6 @@ export const videos = defineType({
       title: "Video Name",
       name: "name",
       type: "string",
-      validation: (r) => r.required(),
     }),
     defineField({
       title: "Video Link",

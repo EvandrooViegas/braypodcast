@@ -64,6 +64,10 @@ html {
 .nav-index {
   z-index: 10;
 }
+.art-modal-index {
+  z-index: 20;
+
+}
 
 .full {
   width: 100%;

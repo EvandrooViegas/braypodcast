@@ -1,5 +1,5 @@
 export default interface iArt {
-    name: string
-    description: string 
-    image: string
+    name?: string
+    description?: string 
+    img: string
 }

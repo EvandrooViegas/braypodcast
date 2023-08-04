@@ -1,10 +1,10 @@
-import wait from "@/utils/wait";
 import FollowersGrowth from "./FollowersGrowth";
 import Home from "./Home";
 import Socials from "./Socials";
 import Videos from "./Videos";
 import { getMeData } from "@/actions/me";
 import LatestVideo from "./LatestVideo";
+import Arts from "./Arts";
 import Photos from "./Photos";
 import Skills from "./Skills";
 import TrustedBy from "./TrustedBy";
@@ -20,6 +20,7 @@ export default async function Page() {
   const photos = me?.photos
   const skills = me?.skills
   const trusted_by = me?.trusted_by
+  const arts = me?.arts
   return (
     <main className="flex flex-col gap-12">
       <Home me={me} />
@@ -27,6 +28,7 @@ export default async function Page() {
       <Skills skills={skills} />
       <Photos photos={photos} />
       <Videos videos={bestVideos} />
+      <Arts arts={arts} />
       <FollowersGrowth followersGrowth={followersGrowth} />
       <TrustedBy trusted_by={trusted_by} />
       <Socials socials={socials} />

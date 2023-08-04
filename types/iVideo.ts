@@ -1,5 +1,5 @@
 export default interface iVideo {
-    name: string
+    name?: string
     link: string
     banner: string
 }

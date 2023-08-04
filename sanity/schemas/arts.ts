@@ -11,7 +11,6 @@ export const arts = defineType({
       title: "Art Name",
       name: "name",
       type: "string",
-      validation: (r) => r.required(),
     }),
     defineField({
       title: "Art Description",

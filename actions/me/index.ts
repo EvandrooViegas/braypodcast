@@ -1,7 +1,9 @@
 "use server";
 
 import { sanity } from "@/sanity/lib/client";
+import iArt from "@/types/iArt";
 import iMe from "@/types/iMe";
+import iTestimonial from "@/types/iTestimonial";
 import iTrustedBy from "@/types/iTrustedBy";
 import iVideo from "@/types/iVideo";
 import getSanityImage from "@/utils/get-sanity-image";
@@ -11,6 +13,7 @@ export async function getMeData(): Promise<iMe | null> {
   const data = await sanity.fetch(`*[_type == 'me']{
     ...,
     best_videos[]->,
+    arts[]->
   }[0]`);
 
   if(!data) return null 
@@ -22,10 +25,18 @@ export async function getMeData(): Promise<iMe | null> {
       ...v,
       banner: v?.banner ? getSanityImage(v.banner) : ""
     })),
+    arts: data.arts?.map((a:iArt) => ({
+      ...a,
+      img: a?.img ? getSanityImage(a.img) : ""
+    })),
     trusted_by: data.trusted_by?.map((e: iTrustedBy) => ({
       ...e,
       avatar: e.avatar ? getSanityImage(e.avatar) : ""
-    }))
+    })),
+    testimonials: data.testimonials?.map((e: iTestimonial) => ({
+      ...e,
+      avatar: e.avatar ? getSanityImage(e.avatar) : ""
+    })),
   };
   return me
 }
