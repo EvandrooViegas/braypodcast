@@ -8,6 +8,7 @@ import Arts from "./Arts";
 import Photos from "./Photos";
 import Skills from "./Skills";
 import TrustedBy from "./TrustedBy";
+import Testimonials from "./Testimonials";
 
 export const revalidate = 15;
 
@@ -21,6 +22,7 @@ export default async function Page() {
   const skills = me?.skills
   const trusted_by = me?.trusted_by
   const arts = me?.arts
+  const testimonials = me?.testimonials
   return (
     <main className="flex flex-col gap-12">
       <Home me={me} />
@@ -30,6 +32,7 @@ export default async function Page() {
       <Videos videos={bestVideos} />
       <Arts arts={arts} />
       <FollowersGrowth followersGrowth={followersGrowth} />
+      <Testimonials testimonials={testimonials} />
       <TrustedBy trusted_by={trusted_by} />
       <Socials socials={socials} />
     </main>
