@@ -65,10 +65,10 @@ export const me = defineType({
       of: [{ type: "reference", name: "video", title: "Video", to: [{ type: "video" }] }],
     }),
     defineField({
-      title: "Best Arts",
-      name: "arts",
+      title: "Guests",
+      name: "guests",
       type: "array",
-      of: [{ type: "reference", name: "arts", title: "Arts", to: [{ type: "arts" }] }],
+      of: [{ type: "reference", name: "guests", title: "Guests", to: [{ type: "guests" }] }],
     }),
     social_medias,
     infos,

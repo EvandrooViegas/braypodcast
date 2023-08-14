@@ -35,7 +35,7 @@ export default function Home(props:Props) {
           bg-primary hover:bg-transparent  
           border border-transparent border-dashed  hover:border-primary
           ">
-            <a href="#socials">Talk With me! 👋</a>
+            <a href="#socials">Social Medias! 👋</a>
           </button>
         </div>
         <div className="md:grid md:grid-cols-3 flex flex-col gap-5 items-center mt-6">

@@ -5,7 +5,7 @@ import React from "react";
 
 type Props = { videos: iVideo[] | undefined, title?: string }
 export default function Videos(props:Props) {
-  const { videos, title = "Best Videos" } = props
+  const { videos, title = "Clips" } = props
   if(!videos) return null
   return (
     <section className="flex flex-col gap-3" id="videos">

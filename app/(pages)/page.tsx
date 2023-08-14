@@ -4,13 +4,13 @@ import Socials from "./Socials";
 import Videos from "./Videos";
 import { getMeData } from "@/actions/me";
 import LatestVideo from "./LatestVideo";
-import Arts from "./Arts";
 import Photos from "./Photos";
 import Skills from "./Skills";
 import TrustedBy from "./TrustedBy";
 import Testimonials from "./Testimonials";
+import Guests from "./Guests";
 
-export const revalidate = 15;
+export const revalidate = 0;
 
 export default async function Page() {
   const me = await getMeData();
@@ -21,7 +21,7 @@ export default async function Page() {
   const photos = me?.photos
   const skills = me?.skills
   const trusted_by = me?.trusted_by
-  const arts = me?.arts
+  const guests = me?.guests
   const testimonials = me?.testimonials
   return (
     <main className="flex flex-col gap-12">
@@ -30,7 +30,7 @@ export default async function Page() {
       <Skills skills={skills} />
       <Photos photos={photos} />
       <Videos videos={bestVideos} />
-      <Arts arts={arts} />
+      <Guests guests={guests} />
       <FollowersGrowth followersGrowth={followersGrowth} />
       <Testimonials testimonials={testimonials} />
       <TrustedBy trusted_by={trusted_by} />

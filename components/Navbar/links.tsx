@@ -2,7 +2,7 @@
 export const links = [
     { name: "Home", href: "/" },
     { name: "Videos", href: "#videos" },
-    { name: "Arts", href: "#arts" },
+    { name: "Guests", href: "#guests" },
     { name: "Socials", href: "#socials" },  
 ]
 
